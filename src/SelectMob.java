@@ -80,7 +80,7 @@ public class SelectMob {
 		do{
 			int mattack = dice.nextInt((24 - 18) + 1) + 18;
 			newmob = Dialogue(name, mhealth, mattack, stats, who, dice, mstrength, newmob, resources);
-			if(mhealth[0]!=0 && newmob==true)
+			if(mhealth[0]!=0 && newmob==false)
 			Skills.Passive(null, dice, name, mhealth, 0, orighealth, attack);
 		}while(mhealth[0]!=0 && stats[who][0]!=0 && newmob==false);
 	}
@@ -112,7 +112,7 @@ public class SelectMob {
 			System.out.printf("Strength - %s points%n", mstrength);
 			System.out.println("============================");
 		}
-		run = ExploreSystem.Menu(stats, who, mhealth, dice, name, resources);
+		run = HumanAttack.Menu(stats, who, mhealth, dice, name, resources);
 		Thread.sleep(1000);
 		if(mhealth[0]!=0 && run==false)
 		{

@@ -8,8 +8,8 @@ public class Sleep {
 		++days;
 		System.out.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
 		System.out.printf("Sleep >> You have survived %d days...%n", days);
-		for(int counter = 0;counter<stats.length;counter++){
-			for(int counter1 = 0;counter1<stats[counter].length;counter1++){
+		for(int counter = 0;counter<stats.length-1;counter++){
+			for(int counter1 = 0;counter1<stats[counter].length-1;counter1++){//minus 1 because we don't want to detect lvl
 				if(stats[counter][counter1]<=15){
 					System.out.printf("%s >> %s is critically low on %s!: %d%% %n",warn,name[counter], state[counter1], stats[counter][counter1]);
 					Thread.sleep(700);
