@@ -40,7 +40,7 @@ public class MonsterRPG implements Serializable{
 		File Gametext = new File("Gamestat.sav");
 		Property property = new Property();
 		// ================================================//Reads file
-		if (!Gametext.exists()) {
+		if (Gametext.exists()) {
 			try {
 				FileInputStream fileStream = new FileInputStream(Gametext);
 				ObjectInputStream objectStream = new ObjectInputStream(fileStream);
